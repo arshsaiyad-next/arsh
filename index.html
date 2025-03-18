@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="">
+    <title>Birthday Surprise</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background: #ffecb3;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+        #surprise {
+            display: none;
+            font-size: 24px;
+            font-weight: bold;
+            color: #ff4081;
+            animation: fadeIn 2s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .button {
+            text-decoration: none;
+            background: #ff4081;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <a href="#" class="button" onclick="showSurprise()">Click for a Surprise 🎉</a>
+    <div id="surprise">🎂 Happy Birthday, <span id="name"></span>! 🎈🎁</div>
+
+    <script>
+        function showSurprise() {
+            let name = prompt("Enter the birthday person's name:");
+            if (name) {
+                document.getElementById('name').innerText = name;
+                document.getElementById('surprise').style.display = "block";
+            }
+        }
+    </script>
+
+</body>
+</html>
